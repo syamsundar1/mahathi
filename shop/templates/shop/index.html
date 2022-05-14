@@ -1,0 +1,296 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css">
+    <script src="https://kit.fontawesome.com/9f9d0bb2ad.js" crossorigin="anonymous"></script>
+    <title>Mahathi building contractors</title>
+
+</head>
+
+<body>
+
+    <section id="home" class="header" style="background-image: url('{% static 'images/homepage.jpg' %}') ;">
+        <!-- <section class="header"> -->
+        <nav class="nav-class">
+            <!-- <a href=""><img src="{% static 'images/logocopy.jpeg' %}"></a> -->
+            <div class="nav-links">
+                <!-- <i class="fas fa-times"></i> -->
+                <ul>
+                    <!-- <li><button id="show-estimation" class="cost-estimation">Cost Estimation</button></li> -->
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#aboutus">ABOUT</a></li>
+                    <li><a href="#service">OUR SERVICES</a></li>
+                    <li><a href="#portfolio">WORK</a></li>
+                    <li><a href="#reviews">REVIEWS</a></li>
+                </ul>
+            </div>
+            <!-- <i class="fas fa-bars"></i> -->
+        </nav>
+
+        <div class="text-box">
+            <h1>MAHATHI CONSTRUCTIONS</h1>
+            <p>Build Your Dream House.</p>
+            <!-- <a class="hero-btn" href="">Book a Free Consultation</a> -->
+            <button id="show-login" class="hero-btn">Book a Free Consultation</button>
+        </div>
+
+        <!-- booking Consultation  -->
+
+        <div class="popup">
+            <div class="close-btn">&times;</div>
+            <form action="" method="POST" class="content-form">
+                {% csrf_token %}
+                <div class="form">
+                    <h2>Book a Free Consultation</h2>
+                    <div class="form-element">
+                        <label for="name">Name : </label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name.">
+                    </div>
+                    <div class="form-element">
+                        <label for="email">Email : </label>
+                        <input type="text" id="email" name="email" placeholder="Enter your email.">
+                    </div>
+                    <div class="form-element">
+                        <label for="phonenumber">Phone Number : </label>
+                        <input type="number" id="phonenumber" name="phonenumber" placeholder="Enter your phone number.">
+                    </div>
+                    <div class="form-element">
+                        <button>Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+        <!-- Cost Estimation -->
+        <!-- 
+        <div class="popup-cost">
+            <div class="close-btn">&times;</div>
+            <form action="" method="POST" class="content-form">
+                {% csrf_token %}
+                <div class="cost-form">
+                    <h2>Cost Estimation</h2>
+                    <div class="cost-form-element">
+                        <label for="sqft">Sqft : </label>
+                        <input type="number" id="sqft" name="name" placeholder="Enter total sqft.">
+                    </div>
+                    <div class="cost-form-element">
+                        <label for="floors">Floors : </label>
+                        <input type="text" id="floors" name="floors" placeholder="Enter number of floors.">
+                    </div>
+                    <div class="cost-form-element">
+                        <button>Submit</button>
+                    </div>
+                    <div class="cost-form-element">
+                        <p>Aprox Cost Estimation : </p>
+                    </div>
+                </div>
+            </form>
+        </div> -->
+
+    </section>
+
+    <!-- services section -->
+
+    <section id="service" class="services">
+        <h1 class="service-headline">OUR SERVICES</h1>
+        <p>We do all kind of work</p>
+
+        <div class="row">
+
+            <div class="service-col">
+                <h3>Residential Construction</h3>
+                <p>We build houses which are perfect for our living lifestyle</p>
+
+            </div>
+
+            <div class="service-col">
+                <h3>Commercial Construction</h3>
+                <p>We do all kind of Office Space, Hospital, hotels, public houses, restaurants, cafes, retail stores, shopping malls, shops.</p>
+
+            </div>
+            <div class="service-col">
+                <h3>Project Management</h3>
+                <p>We proceed in a systematic order from planning to delivery with no issues.</p>
+
+            </div>
+            <div class="service-col">
+                <h3>Interior Designing</h3>
+                <p>Customise your home from Material, Interiors, Furnishing to Courtyards or Swimming pools! We cover everything to make the perfect.</p>
+
+            </div>
+            <div class="service-col">
+                <h3>Renovation</h3>
+                <p>Our home renovation services includes reflooring, painting & upgrading your kitchens and bathrooms. We’ll make sure you understand the remodeling process so you can plan for interruptions.</p>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- portfolio -->
+
+    <section id="portfolio" class="portfolio">
+
+        <h1>WHAT WE DO</h1>
+        <p>We do best at our work.</p>
+
+        <div class="row">
+            <div class="portfolio-col">
+                <img src="{% static 'images/apartment.jpg' %}">
+                <div class="layer">
+                    <h3>Apartment</h3>
+
+                </div>
+            </div>
+            <div class="portfolio-col">
+                <img src="{% static 'images/group.jpg' %}">
+                <div class="layer">
+                    <h3>Group Houses</h3>
+
+                </div>
+            </div>
+            <div class="portfolio-col">
+                <img src="{% static 'images/interior.jpg' %}">
+                <div class="layer">
+                    <h3>Interior Design</h3>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Why do you choose mahathi constructions -->
+
+    <section class="faclites">
+        <h1>Why should you choose US</h1>
+        <p>At our core are three things that define who we are and what we stand for.</p>
+
+        <div class="row">
+            <div class="faclites-col">
+                <img src="{% static 'images/house1.jpeg' %}">
+                <h3>Best desgin</h3>
+                <p>Your dream home project is our responsibility.</p>
+            </div>
+            <div class="faclites-col">
+                <img src="{% static 'images/house2.jpeg' %}">
+                <h3>On time Delivery</h3>
+                <p>100% Responsibility from Plan Approval to Handover</p>
+            </div>
+            <div class="faclites-col">
+                <img src="{% static 'images/house3.jpeg' %}">
+                <h3>No Cost Over Runs</h3>
+                <p>Fixed pre-agreed project cost</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Reviews -->
+    <section id="reviews" class="reviews">
+        <h1>What our Clients say.</h1>
+        <p>This is genuine review from our clients</p>
+
+        <div class="row">
+            <div class="reviews-col">
+                <img src="{% static 'images/dopecard.jpg' %}">
+                <div>
+                    <p>" Your work looks great! It's clear that you care about your work and take the time to do it correctly. I especially liked that you asked the us about the design preferences before starting the project, and I'm excited to see what
+                        you do next."</p>
+                    <h3>-Syam Sundar</h3>
+                </div>
+            </div>
+            <div class="reviews-col">
+                <img src="{% static 'images/tanushcopy.jpeg' %}">
+                <div>
+                    <p>"I'm really happy with your determination to finish this project. I know it wasn't easy, but I knew you could do it. Thank you for your extra effort"</p>
+                    <h3>-Tanush</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- footer about us section -->
+
+    <section id="aboutus" class="footer">
+        <h4>About Us</h4>
+        <p>all you need to know about us!</p>
+        <div class="row">
+            <div class="about-col">
+                <div class="google-maps">
+                    <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.1185229315324!2d80.68226631486444!3d16.520112988603692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35e56724c3e63d%3A0x42247e7e047bb5cf!2sMAHATHI%20CONTRACTORS!5e0!3m2!1sen!2sin!4v1627025789428!5m2!1sen!2sin"
+                            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
+                </div>
+                <div class="about-col-menu">
+                    <h2>Contact Us.</h2>
+                    <br>
+                    <ul class="box">
+                        <li>Whats app : 8520912275</li>
+                        <li>Phone Number : 8688074469</li>
+                        <br>
+                        <li>Address: D.No 2-67,</li>
+                        <li> Near My Mart,</li>
+                        <li> Vanguru Lakshmipathy Rao road,</li>
+                        <li> Ramavarappadu</li>
+                        <li> Vijayawada, Andhra Pradesh.</li>
+                        <li> 521108.</li>
+                        <br>
+                        <div class="icons">
+                            <!-- <i class="fa fa-facebook"></i> -->
+                            <a href="https://www.facebook.com/sampathkumar.simhadri"><i class="fa fa-facebook"></i></a>
+                            <!-- <i class="fa fa-instagram"></i> -->
+                            <a href="https://www.instagram.com/sampathkumar1976/"><i class="fa fa-instagram"></i></a>
+                            <!-- <i class="fa fa-whatsapp"></i> -->
+                            <a href="https://wa.me/918688074469"><i class="fa fa-whatsapp"></i></a>
+                            <!-- <i class="fa fa-twitter"></i> -->
+                            <!-- <i class="fa fa-twitter"></i> -->
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+
+
+
+</html>
+
+<script>
+    document.querySelector("#show-login").addEventListener("click", function() {
+        document.querySelector(".popup").classList.add("active");
+    });
+    document.querySelector(".popup .close-btn").addEventListener("click", function() {
+        document.querySelector(".popup").classList.remove("active");
+    });
+    document.querySelector("#show-estimation").addEventListener("click", function() {
+        document.querySelector(".popup-cost").classList.add("active");
+    });
+    document.querySelector(".popup-cost .close-btn").addEventListener("click", function() {
+        document.querySelector(".popup-cost").classList.remove("active");
+    });
+</script>
